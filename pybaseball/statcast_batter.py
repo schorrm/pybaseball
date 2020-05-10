@@ -17,7 +17,7 @@ def statcast_batter(start_dt=None, end_dt=None, player_id=None):
         df = split_request(start_dt, end_dt, player_id, url)
         return df
     
-def statcast_batter_exitVeloBarrels(year, minBBE="q"):
+def statcast_batter_exitvelo_barrels(year, minBBE="q"):
     url = f"https://baseballsavant.mlb.com/leaderboard/statcast?type=batter&year={year}&position=&team=&min={minBBE}&csv=true"
     res = requests.get(url, timeout=None).content
     data = pd.read_csv(io.StringIO(res.decode('utf-8')))
