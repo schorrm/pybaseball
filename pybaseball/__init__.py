@@ -3,7 +3,7 @@ from .playerid_lookup import playerid_reverse_lookup
 from .playerid_lookup import playerid_lookup
 from .statcast import statcast, statcast_single_game
 from .statcast_pitcher import statcast_pitcher
-from .statcast_batter import statcast_batter
+from .statcast_batter import statcast_batter, statcast_batter_exitvelo_barrels
 from .league_batting_stats import batting_stats_bref
 from .league_batting_stats import batting_stats_range
 from .league_batting_stats import bwar_bat
