@@ -1,5 +1,7 @@
 from pybaseball.utils import sanitize_input, split_request
 import pandas as pd
+import requests
+import io
 
 def statcast_batter(start_dt=None, end_dt=None, player_id=None):
     """
