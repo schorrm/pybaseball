@@ -35,7 +35,7 @@ def chadwick_register(save: bool = False) -> pd.DataFrame:
     table = table[cols_to_keep]
 
     if save:
-        table.to_csv(register_file)
+        table.to_csv(register_file, index=False)
     
     return table
 
