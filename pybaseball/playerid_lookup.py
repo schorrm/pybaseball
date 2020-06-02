@@ -18,13 +18,11 @@ def chadwick_register(save: bool = False) -> pd.DataFrame:
 
     print('Gathering player lookup table. This may take a moment.')
     s = requests.get(url).content
-    cols_to_keep = [
-        'name_last', 'name_first', 'key_mlbam', 'key_retro', 'key_bbref', 'key_fangraphs', 'mlb_played_first',
-        'mlb_played_last'
-    ]
+    mlb_only_cols = ['key_retro', 'key_bbref', 'key_fangraphs', 'mlb_played_first', 'mlb_played_last']
+    cols_to_keep = ['name_last', 'name_first', 'key_mlbam'] + mlb_only_cols
     table = pd.read_csv(io.StringIO(s.decode('utf-8')), usecols=cols_to_keep)
 
-    table.dropna(how='all', subset=cols_to_keep[3:], inplace=True) # Keep only the major league rows
+    table.dropna(how='all', subset=mlb_only_cols, inplace=True) # Keep only the major league rows
     table.reset_index(inplace=True, drop=True)
 
     table[['key_mlbam', 'key_fangraphs']] = table[['key_mlbam', 'key_fangraphs']].fillna(-1)
