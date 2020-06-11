@@ -58,3 +58,5 @@ from .retrosheet import park_codes
 from .retrosheet import rosters
 from .retrosheet import events
 from .team_game_logs import team_game_logs
+from .plotting import plot_stadium
+from .plotting import spraychart

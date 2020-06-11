@@ -89,7 +89,8 @@ setup(
                       'beautifulsoup4>=4.4.0',
                       'requests>=2.18.1',
                       'lxml>=4.2.1',
-                      'pygithub>=1.51'
+                      'pygithub>=1.51',
+                      'altair'
                       ],
 
     # List additional groups of dependencies here (e.g. development
@@ -104,6 +105,7 @@ setup(
     # If there are data files included in your packages that need to be
     # installed, specify them here.  If using Python 2.6 or less, then these
     # have to be included in MANIFEST.in as well.
+    include_package_data=True,
     #package_data={
     #    'sample': ['package_data.dat'],
     #},
