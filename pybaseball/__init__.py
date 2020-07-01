@@ -18,6 +18,7 @@ from .batting_leaders import batting_stats
 from .team_pitching import team_pitching
 from .team_batting import team_batting
 from .top_prospects import top_prospects
+from .amateur_draft import amateur_draft
 from .lahman import parks
 from .lahman import all_star_full
 from .lahman import appearances
