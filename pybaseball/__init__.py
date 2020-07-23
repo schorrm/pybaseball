@@ -16,7 +16,9 @@ from .team_results import schedule_and_record
 from .pitching_leaders import pitching_stats
 from .batting_leaders import batting_stats
 from .team_pitching import team_pitching
+from .team_pitching import team_pitching_bref
 from .team_batting import team_batting
+from .team_batting import team_batting_bref
 from .top_prospects import top_prospects
 from .amateur_draft import amateur_draft
 from .lahman import parks

@@ -115,5 +115,6 @@ def team_pitching_bref(team, start_season, end_season=None):
     headings.insert(2, "Year")
     data = pd.DataFrame(data=data, columns=headings) # [:-5]  # -5 to remove Team Totals and other rows (didn't work in multi-year queries)
     data = data.dropna()  # Removes Row of All Nones
+    data.reset_index(drop=True, inplace=True)  # Fixes index issue (Index was named 'W" for some reason)
 
     return data
