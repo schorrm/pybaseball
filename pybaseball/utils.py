@@ -76,7 +76,7 @@ def split_request(start_dt, end_dt, player_id, url):
     player_id = str(player_id)
     print('Gathering Player Data')
     # break query into multiple requests
-    while current_dt < end_dt:
+    while current_dt <= end_dt:
         remaining = end_dt - current_dt
         # increment date ranges by at most 60 days
         delta = min(remaining, datetime.timedelta(days=2190))
